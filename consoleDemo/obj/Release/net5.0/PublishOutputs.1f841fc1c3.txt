@@ -1,0 +1,5 @@
+C:\Users\EE\Desktop\consoleDemo\out\consoleDemo.exe
+C:\Users\EE\Desktop\consoleDemo\out\consoleDemo.dll
+C:\Users\EE\Desktop\consoleDemo\out\consoleDemo.deps.json
+C:\Users\EE\Desktop\consoleDemo\out\consoleDemo.runtimeconfig.json
+C:\Users\EE\Desktop\consoleDemo\out\consoleDemo.pdb
