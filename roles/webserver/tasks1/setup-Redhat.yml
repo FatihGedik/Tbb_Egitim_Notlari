@@ -1,0 +1,9 @@
+---
+
+- name: redhat apache
+  yum:
+    name:httpd
+    state: present
+
+ 
+

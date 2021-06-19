@@ -1,0 +1,22 @@
+---
+- name: disk durumun bak
+  shell: "df -h /"
+  args:
+    executable: "/bin/bash"
+  register: disk
+
+- name: disl çıktısı
+  debug:
+    msg: "{{ disk.stdout_lines }}"
+
+- name: redhat rsyslog kurulumu
+  yum:
+    name: rsyslog
+    state: present 
+ 
+
+ 
+- name: rsyslog service restart
+  service: "name=rsyslog state=restarted"
+ 
+

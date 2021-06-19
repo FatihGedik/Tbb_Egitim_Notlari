@@ -1,0 +1,33 @@
+
+---
+- name: comman
+  hosts: all
+  become: true
+  become_user: root
+  remote_user: ged
+
+  tasks:
+  - name: rootfs disk durumuna bak
+    shell: "df -h /"
+    args:
+      executable: "/bin/bash"
+    register: disk
+  - name: output rootfs disk durumu
+    debug:
+      msg: "{{disk.stdout_lines}}"
+- name: my playbook1 ubuntu kurulumu
+  hosts: all
+  become: true
+  become_user: root
+  remote_user: ged
+
+  tasks:
+  - name: redhat rsyslog kurma
+    shell: yum install rsyslog -y
+    when: ansible_os_family == "RedHat"
+  - name: debian rsyslog kurma
+    shell: apt-get install rsyslog -y
+    when: ansible_os_family == "Debian"
+  - name: Rsyslog service restart
+    service: "name=rsyslog state=restarted"
+
