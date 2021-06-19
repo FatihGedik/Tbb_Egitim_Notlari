@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp
+  labels:
+    app: webapp
+    type: java
+
+spec:
+  containers:
+  - name: nginx-controller
+    image: nginx

@@ -1,0 +1,27 @@
+x: 5
+meyve: "muz"
+meyveler: 
+- "elma"
+- "armut"
+araba:
+  renk: "kırmızı" 
+  motor: "1.5" 
+  yakıt: "dizel"
+
+
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: myPod 
+  labels: 
+    app: "myApp" 
+spec: 
+  containers: 
+  - name: "myContainer" 
+    image: nginx
+  - name: "mysecondContainer" 
+    image: busybox   
+
+
+
+

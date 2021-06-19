@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: newdeploy
+  name: newdeploy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: newdeploy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: newdeploy
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        resources:
+          requests: 
+            memory: "128Mi" 
+            cpu: "0.2" 
+          limits: 
+            memory: "1Gi" 
+            cpu: "1"   
+status: {}
